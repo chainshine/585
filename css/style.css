@@ -1,0 +1,447 @@
+@charset "utf-8";
+/* 簡單流變媒體
+   注意: 流變媒體要求您必須移除 HTML 中媒體的高度和寬度屬性
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+
+img, object, embed, video {
+    max-width: 100%;
+}
+/* IE 6 不支援最大寬度，因此寬度預設為 100% */
+.ie6 img {
+    width:100%;
+}
+body, main, footer{ font-family: "微軟正黑體", "Arial", sans-serif;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00a0e7+5,1f2186+90 */
+background: #00a0e7; /* Old browsers */
+background: -moz-linear-gradient(left,  #00a0e7 5%, #1f2186 90%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #00a0e7 5%,#1f2186 90%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #00a0e7 5%,#1f2186 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a0e7', endColorstr='#1f2186',GradientType=1 ); /* IE6-9 */
+}
+input:focus, textarea:focus, select:focus, option:focus{ outline: none;}
+
+section{overflow: hidden;}
+
+img{  display: block; } /*去除縫隙*/
+
+form{width: 100%;}
+
+a:active,
+a:visited,
+a:hover { outline: 0; text-decoration:none;}
+
+@font-face {   
+   font-family: "NotoSansJP-Bold";
+   src: url("../webfonts/NotoSansJP-Bold.woff") format("woff"), url("../webfonts/NotoSansJP-Bold.otf") format("truetype");
+}
+
+/* 行動版面: 480px 以下。 */
+
+.max-width-style{ width: 80%; margin: auto 10%;}  
+
+NOWRAP{white-space:nowrap;}
+
+.header-box{ width: 100%; position: relative;}
+   .header-box img{ width: 100%;}
+   .header-box h3{ width: 80%; margin: 0 20% 0 0; z-index: 1;}
+   .header-box-content{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; position: absolute; top: 5%; z-index: 3;}
+      .header-box-content h1{ width: 70%; margin: 0 10% 10px 20%;}
+      .header-box-content-text{ width: 70%; margin: 0 10% 0 20%;}
+         .header-box-content-text p{ width: 100%; margin: 0 0 2px;}
+
+.boundary-style{ width: calc(100% - 20px); margin: 20px 10px 0;}
+   .content-top-blank-box{ width: 100%; padding: 10px 0;}
+   .content-title{ width: 100%; margin: 0; padding: 15px 0; text-align: center; font-family: 'NotoSansJP-Bold', "Arial", sans-serif; font-size: 1.45em; font-weight: bolder; color: #FFF;}
+   .content-title-img{ width: 80%; margin: 0 10%; padding: 15px 0;}
+      .content-title-img img{width: 100%;}
+
+.img-annotation-style{ position: relative;}
+   .img-annotation-style h6{ width: 96%; margin: 0 2%; text-align: right; position: absolute; bottom: 8px; font-size: 0.65em; font-weight: normal; color: #FFF; z-index: 3;}
+   
+.content-box01{ width: 100%; margin: 0 0 50px; padding: 15px 0 30px; background-color: #FFF; color: #151515;}
+   .content-box01 img {width: 100%;}
+   .content-box01 h2{ width: 100%; margin: 0 0 30px; font-size: 1em; line-height: 1.35em; text-align: justify;}
+   .content-box01-project{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 100%; margin: 0 0 40px;}
+      .content-box01-projectleft{ width: 100%; margin: 0 0 15px;}
+      .content-box01-projectright{ width: 100%; margin: 0;}
+         .content-box01-projectright h3{ width: 100%; margin: 0 0 8px; font-family: 'NotoSansJP-Bold', "Arial", sans-serif; font-size: 1.05em;}
+         .content-box01-projectright h4{ width: 100%; margin: 0; font-size: 0.9em; font-weight: normal; line-height: 1.5em; text-align: justify;}
+   .content-box01-img-text{ width: 96%; margin: 0 2%; padding: 20px 15px; box-sizing: border-box; position: absolute; top: 6px; background-color: rgba(255, 255, 255, 0.7); text-align: justify; z-index: 3;}
+      .content-box01-img-text-title, .content-box01-img-text-bigtitle{ width: 100%; color: #cb1820; text-align: center;}
+      .content-box01-img-text-title{margin: 0 0 4px;  font-size: 0.95em;}
+      .content-box01-img-text-bigtitle{margin: 0 0 8px;  font-family: 'NotoSansJP-Bold', "Arial", sans-serif; font-size: 1.05em;}
+      .content-box01-img-text p{ width: 98%; margin: 0 1%; font-size: 0.75em; line-height: 1.5em; color: #151515;}
+   
+.surrounding-view-box{ display: -webkit-flex; display: flex; flex-wrap: wrap; width: 90%; margin: 0 5% 20px; padding: 10px 5px; box-sizing: border-box;}
+   .surrounding-view-box h4{ float: left; width: 100%; margin: 20px 0 0; text-align: center; font-size: 0.95em; color: #FFF;}
+   .surrounding-view-box a{ float: left; width: 180px; margin: 0 calc(50% - 90px); padding: 8px 0; text-align: center; color: #FFF; border: 2px #2CBADD solid; text-decoration: none; background-color: #2CBADD; border-radius: 35px; transition: 0.2s ease-in-out;}
+      .surrounding-view-box a:visited, .surrounding-view-box a:active{ text-decoration: none; background-color: #2CBADD;}
+      .surrounding-view-box a:hover{ background-color: #1F2186; text-decoration: none; border: 2px #FFF solid;}
+  
+.content-box02{ width: 100%; margin: 10px 0 30px; padding: 10px 0 20px;}
+   .content-box02 img {width: 100%;}
+   .content-box02-text{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 100%; margin: 0 0 30px;}
+      .content-box02-text-content{ width: 100%; margin: 0 0 20px;}
+         .content-box02-text-content div{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 96%; margin: 0 4% 0 0;}
+            .content-box02-text-content h3, .content-box02-text-content h4{font-family: 'NotoSansJP-Bold', "Arial", sans-serif; font-size: 1.25em; color: #FFF;}
+            .content-box02-text-content h3{ width: 90px; margin: 0 5px 0 0;}
+            .content-box02-text-content h4{ width: 96%; margin: 0 4% 0 0;}
+            .content-box02-text-content hr{ width: calc(100% - 95px); height: 2px; margin: 5px 0 0; background-color: #FFF; border: none;}
+            .content-box02-text-content p{ width: 100%; margin:10px 0 0; text-align: justify; font-size: 0.95em; color: #FFF; line-height: 1.45em;}
+      .content-box02-text-line{ width: 50%; margin: 0 25%;}
+   .content-box02-img{ display: none;}
+   .content-box02-img-ph{ display: inline-block; width: 100%; margin: 0;}
+      .content-box02-img-ph li{ list-style: none; }
+      .content-box02-img-ph li img{ display: block; width: 100%; margin: 0 auto;}
+      .content-box02-img-ph .hiSlider{ overflow: hidden; width: 100%; margin: 0; padding: 0;}
+      .content-box02-img-ph .hiSlider-item{ float: left;}
+
+.content-whitebg{ background-color: #FFF; padding: 0 0 20px;}
+   .content-whitebg img{ width: 100%;}
+
+.content-box03{ width: 100%; margin: 0;}
+   .content-box03-text{ position: absolute; top: 5%;  font-size: 1em; line-height: 1.35em; text-align: justify; color: #151515;}
+
+.content-box04{ width: 100%; margin: 30px 0;}
+
+.content-box05{ width: 100%; margin: 0; padding: 0 20px; box-sizing: border-box; color: #151515;}
+   .content-box05 h2{ width: 100%; margin: 0 0 8px; text-align: center; font-family: 'NotoSansJP-Bold', "Arial", sans-serif; font-weight: bolder; font-size: 1.4em;}
+   .content-box05 h3{ width: 100%; margin: 0 0 40px; text-align: center; font-size: 1.25em; font-weight: normal;}
+   .content-box05-box{ width: 100%; margin: 0 0 20px; padding: 15px 10px; box-sizing: border-box; font-size: 0.95em; line-height: 1.35em; text-align: justify; background-color: #D5E7EB; border: 2px #749F9C solid;}
+      .content-box05-box font{ font-family: 'NotoSansJP-Bold', "Arial", sans-serif; font-size: 1.15em; font-weight: bolder;}
+   .content-box05-img1, .content-box05-img2{ display: none;}
+   .content-box05-img1-ph{ margin: 0 0 20px;}
+
+
+
+.footer{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 60px 0;}
+   .footer h3{ width: 100%; margin: 0 0 20px; text-align: center; font-family: 'NotoSansJP-Bold', "Arial", sans-serif;font-size: 1.25em; font-weight: bolder; color: #FFF; letter-spacing: 2px;}
+   .footer-form{ width: 100%; margin: 0 0 15px; padding: 20px; box-sizing: border-box; border: 1px #FFF solid;}
+      .footer-form form{ width: 100%;}
+      .footer-form p{width: 100%; margin: 0 0 15px;}
+      .footer-form input, .footer-form textarea{ width: 100%; margin: 0; padding:8px 5px; box-sizing: border-box; border: 1px #AAA solid; border-radius: 3px;}
+      .footer-verification{ width: 100%; margin: 10px 0 25px; text-align: center;}
+      .footer-form button{ width: 100%; padding: 15px 0; text-align: center; background-color: #FFF; border: 1px #AAA solid; border-radius: 4px; transition: 0.2s ease-in-out;}
+         .footer-form button:hover{cursor: pointer; background-color: #00a0e7; color: #FFF; border: 1px #151515 solid;}
+   .footer-information{ width: 100%; padding:20px 0; box-sizing: border-box; color: #FFF;}
+      .footer-information p{ width: 100%; margin: 0 0 10px; font-size: 0.95em;}
+      .footer-logo{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; width: 100%; margin: 0 0 20px;}
+         .footer-logo h4{ width: 35%; margin: 0 10px 0 0;}
+         .footer-logo h5{ width: 16%; margin: 0 10px 0 0;}
+         .footer-logo a img{ transition: 0.15s ease-in-out;}
+            .footer-logo a img:hover{ transform: scale(1.1);}  
+      .footer-information  a{ font-size: 1.05em; font-weight: bolder; color: #FFF; text-decoration: none;}
+         .footer-information  a:visited, .footer-information a:active{ text-decoration: none;}
+         .footer-information  a:hover{ text-decoration: underline;} 
+      .footer-information iframe{ width: 100%; height: 30vh;}
+      .construction-box{ padding: 0 0 60px;}
+         .construction-box h3{ width: 100%; margin: 0 0 30px; font-family: 'NotoSansJP-Bold', "Arial", sans-serif;font-size: 1.25em; font-weight: bolder; color: #FFF; letter-spacing: 2px;}
+         .construction-box div{display: -webkit-flex; display: flex; flex-wrap: wrap; align-items: center; width: 100%; margin: 0 0 20px; font-size: 0.9em; color: #FFF;}
+            .construction-box div h5{ width: 110px; margin: 0 0 5px; padding: 3px 0; text-align: center; font-size: 1.05em; border: 2px #F7EA02 solid;}
+            .construction-box div p{ width: 100%; margin: 0;}
+   
+
+.bottom-button{display: -webkit-flex; display: flex; flex-wrap: wrap; align-items: center; width: 100%; position: fixed; bottom: 0; background-color: rgba(41, 51, 31, 1); z-index: 100000;}
+   .bottom-button a{ width: 25%; margin: 0 0 0 -1px; text-align: center;}
+      .bottom-button a:not(:last-child){ border-right: 1px #FFF solid;}
+      .bottom-button a, .bottom-button a:visited, .bottom-button a:hover{ text-decoration: none;}      
+   .bottom-button-box{ width: 100%; padding: 4px 0 2px;}
+      .bottom-button-box span{ float: left; width: 100%; margin: 0 0 3px; font-size: 0.85em; color: #F7EA02;}
+      .bottom-button-box p{ width: 100%; margin: 0; font-size: 0.6em; color: #FFF;}
+      .bottom-button-box img{ width: 30px; margin: 0 calc(50% - 15px);}
+     
+@media only screen and (min-width: 361px) {
+   .content-box02-text-content h3, .content-box02-text-content h4{ text-align:justify; text-justify:distribute-all-lines; text-align-last:justify;}               
+
+   .construction-box div h5{ width: 110px; margin: 0 6px 0 0; padding: 3px 0; font-size: 1.05em;}
+      .construction-box div p{ width: calc(100% - 120px); margin: 0;}
+}
+
+/* 表格版面: 481px 到 768px。樣式繼承自: 行動版面。 */
+@media only screen and (min-width: 481px) {
+   .max-width-style{ width: 78%; margin: auto 11%;}
+
+   .header-box{ width: 100%;}
+      .header-box h3{ width: 58%; margin: 0 42% 0 0;}
+      .header-box-content{ top: 33%;}
+         .header-box-content h1{ width: 46%; margin: 0 4% 0 0;}
+         .header-box-content-text{ width: 50%; margin: 0;}
+            .header-box-content-text p{ width: 100%; margin: 0 0 3%;}
+
+   .boundary-style{ width: calc(100% - 50px); margin: 30px 25px 0;}
+      .content-top-blank-box{ width: 100%; padding: 20px 0;}
+      .content-title{ width: 100%; margin: 0; padding: 25px 0; font-size: 2.25em;}
+      .content-title-img{ width: 70%; margin: 0 15%; padding: 25px 0;}
+      
+      .img-annotation-style h6{ width: 98%; margin: 0 1%; bottom: 6px; font-size: 0.75em;} 
+   
+   .content-box01{ width: 100%; margin: 0 0 80px; padding: 15px 0 40px;}
+      .content-box01 h2{ width: 100%; margin: 0 0 30px; font-size: 1.25em; line-height: 1.35em;}
+      .content-box01-project{ width: 100%; margin: 0 0 60px;}
+         .content-box01-projectleft{ width: 100%; margin: 0 0 20px;}
+         .content-box01-projectright{ width: 100%; margin: 0;}
+            .content-box01-projectright h3{ width: 100%; margin: 0 0 15px; font-size: 1.35em;}
+            .content-box01-projectright h4{ width: 100%; margin: 0; font-size: 1.05em; line-height: 1.5em;}
+      .content-box01-img-text{ width: 94%; margin: 0 3%; padding: 20px; top: 2%;}
+         .content-box01-img-text-title, .content-box01-img-text-bigtitle{ width: 100%; }
+         .content-box01-img-text-title{margin: 0 0 4px;  font-size: 1.15em;}
+         .content-box01-img-text-bigtitle{margin: 0 0 10px; font-size: 1.35em;}
+         .content-box01-img-text p{ width: 96%; margin: 0 2%; font-size: 1em; line-height: 1.35em;} 
+
+      .surrounding-view-box{ width: 90%; margin: 0 5% 20px; padding: 10px 5px;}
+         .surrounding-view-box h4{ width: 100%; margin: 20px 0 0; font-size: 1.05em;}
+         .surrounding-view-box a{ width: 220px; margin: 0 calc(50% - 110px); padding: 10px 0;}
+
+   .content-box02{ width: 100%; margin: 10px 0 30px; padding: 10px 0 20px;}
+      .content-box02-text{ width: 100%; margin: 0 0 30px;}
+         .content-box02-text-content{ width: 100%; margin: 0 0 20px;}
+            .content-box02-text-content div{ width: 90%; margin: 0 10% 0 0;}
+               .content-box02-text-content h3, .content-box02-text-content h4{ font-size: 1.35em;}
+               .content-box02-text-content h3{ width: 100px; margin: 0 10px 0 0;}
+               .content-box02-text-content h4{ width: 90%; margin: 0 10% 0 0;}
+               .content-box02-text-content hr{ width: calc(100% - 110px); height: 2px; margin: 5px 0 0;}
+               .content-box02-text-content p{ width: 100%; margin:20px 0 0; font-size: 1em; line-height: 1.4em;}
+         .content-box02-text-line{ width: 40%; margin: 0 30%;}
+      .content-box02-img{ display: inline-block; width: 100%; margin: 0;}
+         .content-box02-img-project{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 100%; margin: 8px 0;}
+            .content-box02-img-project-box1{ width: calc(44% - 4px); margin: 0;}
+            .content-box02-img-project-box2{ width: calc(56% - 4px);}
+            .content-box02-img-project-box3{ width: calc(50% - 4px); margin: 0;} 
+      .content-box02-img-ph{ display: none;}    
+
+   .content-box03{ width: 100%; margin: 0;}
+      .content-box03-text{ top: 5%; font-size: 1.25em; line-height: 1.35em;}
+
+   .content-box04{ width: 100%; margin: 50px 0;}
+
+   .content-box05{ width: 100%; margin: 0; padding: 0 30px;}
+      .content-box05 h2{ width: 100%; margin: 0 0 8px; font-size: 1.55em;}
+      .content-box05 h3{ width: 100%; margin: 0 0 50px; font-size: 1.35em;}
+      .content-box05-box{ width: 100%; margin: 0 0 30px; padding: 15px 10px; font-size: 1em; line-height: 1.5em;}
+         .content-box05-box font{ font-size: 1.25em;}
+      .content-box05-img1{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: stretch; width: 100%; margin: 0 0 20px;}
+         .content-box05-img1-left{ width: 65%; margin: 0 20px 0 0;}
+         .content-box05-img1-right{display: -webkit-flex; display: flex; flex-wrap: wrap; align-content:space-between; width: calc(35% - 20px);}
+            .content-box05-img1-right div{ width: 100%;}
+      .content-box05-img2{display: -webkit-flex; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: stretch; width: 100%;}
+         .content-box05-img2 div{ width: calc(50% - 10px); margin-bottom:20px;}
+
+   .footer{ padding: 60px 0;}
+      .footer h3{ width: 100%; margin: 0 0 30px; font-size: 1.45em;}
+      .footer-form{ width: 100%; margin: 0 0 50px; padding: 20px;}
+         .footer-form p{width: 100%; margin: 0 0 15px;}
+         .footer-form input, .footer-form textarea{ width: 100%; margin: 0; padding:8px 5px;}
+         .footer-verification{ width: 100%; margin: 10px 0 25px;}
+         .footer-form button{ width: 100%; padding: 15px 0; }
+      .footer-information{ width: 100%; padding: 20px;}
+         .footer-information p{ width: 100%; margin: 0 0 15px; font-size: 1.15em;}
+         .footer-logo{ width: 100%; margin: 0 0 20px;}
+            .footer-logo h4{ width: 35%; margin: 0 10px 0 0 ;}
+            .footer-logo h5{ width: 16%; margin: 0 10px 0 0;} 
+         .footer-information iframe{ width: 100%; height: 30vh;}
+      .construction-box{ padding: 0 20px 80px;}
+         .construction-box h3{ width: 100%; margin: 0 0 30px; font-size: 1.45em;}
+         .construction-box div{ width: 100%; margin: 0 0 20px; font-size: 1.05em;}
+            .construction-box div h5{ width: 110px; margin: 0 6px 0 0; padding: 5px 0;}
+            .construction-box div p{ width: calc(100% - 120px); margin: 0;}
+
+.bottom-button{ width: 100%;}
+   .bottom-button a{ width: 25%; margin: 0 0 0 -1px;}     
+   .bottom-button-box{ width: 100%; padding: 6px 0 4px;}
+      .bottom-button-box span{ float: left; width: 100%; margin: 0 0 3px; font-size: 1.05em;}
+      .bottom-button-box p{ width: 100%; margin: 0; font-size: 0.9em;}
+      .bottom-button-box img{ width: 40px; margin: 0 calc(50% - 20px);}
+}
+
+
+/* 桌面版面: 768px 到1024繼承自: 行動版面和表格版面。 */
+@media only screen and (min-width: 769px) {
+   .max-width-style{ width: 76%; margin: auto 12%;}
+
+   .header-box{ width: 100%;}
+      .header-box h3{ width: 58%; margin: 0 42% 0 0;}
+      .header-box-content{ top: 33%;}
+         .header-box-content h1{ width: 46%; margin: 0 4% 0 0;}
+         .header-box-content-text{ width: 50%;}
+            .header-box-content-text p{ width: 100%; margin: 0 0 3%;}
+
+   .boundary-style{ width: calc(100% - 60px); margin: 50px 30px 0;}
+      .content-top-blank-box{ width: 100%; padding: 25px 0;}
+      .content-title{ width: 100%; margin: 0; padding: 30px 0; font-size: 3em;}
+      .content-title-img{ width: 70%; margin: 0 15%; padding: 30px 0;}
+      
+      .img-annotation-style h6{ width: 96%; margin: 0 2%; bottom: 10px; font-size: 0.95em;}
+   
+   .content-box01{ width: 100%; margin: 0 0 120px; padding: 20px 0 50px;}
+      .content-box01 h2{ width: 100%; margin: 0 0 40px; font-size: 1.65em; line-height: 1.35em;}
+      .content-box01-project{ width: 100%; margin: 0 0 60px;}
+         .content-box01-projectleft{ width: 100%; margin: 0 0 20px;}
+         .content-box01-projectright{ width: 100%; margin: 0;}
+            .content-box01-projectright h3{ width: 100%; margin: 0 0 15px; font-size: 1.45em;}
+            .content-box01-projectright h4{ width: 100%; margin: 0; font-size: 1.15em; line-height: 1.5em;}
+      .content-box01-img-text{ width: 90%; margin: 0 5%; padding: 25px; top: 5%; background-color: rgba(255, 255, 255, 0.4);}
+         .content-box01-img-text-title, .content-box01-img-text-bigtitle{ width: 100%; }
+         .content-box01-img-text-title{margin: 0 0 4px;  font-size: 1.35em;}
+         .content-box01-img-text-bigtitle{margin: 0 0 20px; font-size: 2.15em;}
+         .content-box01-img-text p{ width: 96%; margin: 0 2%; font-size: 1.15em; line-height: 1.35em;}  
+
+      .surrounding-view-box{ width: 96%; margin: 0 2% 30px; padding: 20px;}
+         .surrounding-view-box h4{ width: 48%; margin: 15px 1%; font-size: 1.15em;}
+
+   .content-box02{ width: 100%; margin: 30px 0 50px; padding: 15px 0 30px;}
+      .content-box02-text{ width: 100%; margin: 0 0 30px;}
+         .content-box02-text-content{ width: 90%; margin: 0 1% 0 0;}
+            .content-box02-text-content div{ width: 90%; margin: 0 10% 0 0;}
+               .content-box02-text-content h3, .content-box02-text-content h4{ font-size: 1.65em;}
+               .content-box02-text-content h3{ width: 160px; margin: 0 10px 0 0;}
+               .content-box02-text-content h4{ width: 90%; margin: 0 10% 0 0;}
+               .content-box02-text-content hr{ width: calc(100% - 170px); height: 2px; margin: 5px 0 0;}
+               .content-box02-text-content p{ width: 100%; margin:20px 0 0; font-size: 1.15em; line-height: 1.45em;}
+         .content-box02-text-line{ width: 23%; margin: 0;}
+      .content-box02-img{ width: 100%; margin: 0;}
+         .content-box02-img-project{ width: 100%; margin: 20px 0;}
+            .content-box02-img-project-box1{ width: calc(44% - 10px); margin: 0;}
+            .content-box02-img-project-box2{ width: calc(56% - 10px);}
+            .content-box02-img-project-box3{ width: calc(50% - 10px); margin: 0;}
+
+   .content-box03{ width: 100%; margin: 0;}
+      .content-box03-text{ top: 5%; font-size: 1.65em; line-height: 1.35em;}
+
+   .content-box04{ width: 100%; margin: 60px 0;}
+
+   .content-box05{ width: 100%; margin: 0; padding: 0 40px;}
+      .content-box05 h2{ width: 100%; margin: 0 0 8px; font-size: 2.6em;}
+      .content-box05 h3{ width: 100%; margin: 0 0 60px; font-size: 2.25em;}
+      .content-box05-box{ width: 100%; margin: 0 0 40px; padding: 20px 10px; font-size: 1.35em; line-height: 1.35em;}
+         .content-box05-box font{ font-size: 1.35em;}
+   .content-box05-img1{ width: 100%; margin: 0 0 50px;}
+      .content-box05-img1-left{ width: 66%; margin: 0 20px 0 0;}
+      .content-box05-img1-right{ width: calc(34% - 20px);}
+
+   .footer{ padding: 80px 0;}
+      .footer h3{ width: 100%; margin: 0 0 50px; font-size: 1.65em;}
+      .footer-form{ width: 48%; margin: 0; padding: 20px;}
+         .footer-form p{width: 100%; margin: 0 0 15px;}
+         .footer-form input, .footer-form textarea{ width: 100%; margin: 0; padding:8px 5px;}
+         .footer-verification{ width: 100%; margin: 10px 0 25px;}
+         .footer-form button{ width: 100%; padding: 15px 0; }
+      .footer-information{ width: 48%; padding: 20px;}
+         .footer-information p{ width: 100%; margin: 0 0 15px; font-size: 1.15em;}
+         .footer-logo{ width: 100%; margin: 0 0 20px;}
+            .footer-logo h4{ width: 35%; margin: 0 10px 0 0 ;}
+            .footer-logo h5{ width: 16%; margin: 0 10px 0 0;} 
+         .footer-information iframe{ width: 100%; height: 30vh;}  
+      .construction-box{ padding: 0 20px 20px;}
+         .construction-box h3{ width: 100%; margin: 0 0 50px; font-size: 1.65em;}
+         .construction-box div{ width: 100%; margin: 0 0 20px; font-size: 1.15em;}
+            .construction-box div h5{ width: 110px; margin: 0 6px 0 0; padding: 5px 0;}
+            .construction-box div p{ width: calc(100% - 120px); margin: 0;}
+
+   .bottom-button{display: none;}
+
+}
+
+
+/* 桌面版面: 1025px 到最大樣式繼承自: 行動版面和表格版面。 */
+@media only screen and (min-width: 1025px) {
+   .max-width-style{ width: 70%; margin: auto 15%;} 
+
+   .header-box{ width: 100%;}
+      .header-box h3{ width: 58%; margin: 0 42% 0 0;}
+      .header-box-content{ top: 33%;}
+         .header-box-content h1{ width: 46%; margin: 0 4% 0 0;}
+         .header-box-content-text{ width: 50%;}
+            .header-box-content-text p{ width: 100%; margin: 0 0 3%;}
+
+   .boundary-style{ width: calc(100% - 60px); margin: 50px 30px 0;}
+      .content-top-blank-box{ width: 100%; padding: 30px 0;}
+      .content-title{ width: 100%; margin: 0; padding: 30px 0; font-size: 4em;}
+      .content-title-img{ width: 60%; margin: 0 20%; padding: 30px 0;}
+      
+      .img-annotation-style h6{ width: 96%; margin: 0 2%; bottom: 10px; font-size: 1em;}
+   
+   .content-box01{ width: 100%; margin: 0 0 150px; padding: 20px 0 50px;}
+      .content-box01 h2{ width: 100%; margin: 0 0 50px; font-size: 2em; line-height: 1.5em;}
+      .content-box01-project{ width: 100%; margin: 0 0 80px;}
+         .content-box01-projectleft{ width: 50%; margin: 0;}
+         .content-box01-projectright{ width: 46%; margin: 0 0 0 4%;}
+            .content-box01-projectright h3{ width: 100%; margin: 0 0 15px; font-size: 1.65em;}
+            .content-box01-projectright h4{ width: 100%; margin: 0; font-size: 1.35em; line-height: 1.5em;}
+      .content-box01-img-text{ width: 90%; margin: 0 5%; padding: 30px; top: 5%;}
+         .content-box01-img-text-title, .content-box01-img-text-bigtitle{ width: 100%; }
+         .content-box01-img-text-title{margin: 0 0 4px;  font-size: 1.85em;}
+         .content-box01-img-text-bigtitle{margin: 0 0 20px; font-size: 2.8em;}
+         .content-box01-img-text p{  width: 96%; margin: 0 2%; font-size: 1.35em; line-height: 1.5em;}
+
+   .surrounding-view-box{ width: 90%; margin: 0 5% 30px; padding: 20px;}
+      .surrounding-view-box h4{ width: 48%; margin: 15px 1%; font-size: 1.25em;}
+
+   .content-box02{ width: 100%; margin: 30px 0 50px; padding: 15px 0 30px;}
+      .content-box02-text{ width: 100%; margin: 0 0 30px;}
+         .content-box02-text-content{ width: 85%; margin: 0 5% 0 0;}
+            .content-box02-text-content div{ width: 85%; margin: 0 15% 0 0;}
+               .content-box02-text-content h3, .content-box02-text-content h4{ font-size: 1.9em;}
+               .content-box02-text-content h3{ width: 160px; margin: 0 10px 0 0;}
+               .content-box02-text-content h4{ width: 85%; margin: 0 15% 0 0;}
+               .content-box02-text-content hr{ width: calc(100% - 170px); height: 2px; margin: 5px 0 0;}
+               .content-box02-text-content p{ width: 100%; margin:30px 0 0; font-size: 1.35em; line-height: 1.5em;}
+         .content-box02-text-line{ width: 25%; margin: 0;}
+      .content-box02-img{ width: 100%; margin: 0;}
+         .content-box02-img-project{ width: 100%; margin: 20px 0;}
+            .content-box02-img-project-box1{ width: calc(44% - 10px); margin: 0;}
+            .content-box02-img-project-box2{ width: calc(56% - 10px);}
+            .content-box02-img-project-box3{ width: calc(50% - 10px); margin: 0;}
+
+   .content-box03{ width: 100%; margin: 0 0 80px;}
+      .content-box03-text{ top: 5%; font-size: 2em; line-height: 1.5em;}
+
+   .content-box04{ width: 100%; margin: 80px 0;}
+
+   .content-box05{ width: 100%; margin: 0; padding: 0 50px;}
+      .content-box05 h2{ width: 100%; margin: 0 0 8px; font-size: 3.8em;}
+      .content-box05 h3{ width: 100%; margin: 0 0 80px; font-size: 3.35em;}
+      .content-box05-box{ width: 100%; margin: 0 0 50px; padding: 20px 10px; font-size: 1.65em; line-height: 1.35em;}
+         .content-box05-box font{ font-size: 1.35em;}
+   .content-box05-img1{ width: 100%; margin: 0 0 50px;}
+      .content-box05-img1-left{ width: 66%; margin: 0 20px 0 0;}
+      .content-box05-img1-right{ width: calc(34% - 20px);}
+
+   .footer{ padding: 80px 0;}
+      .footer h3{ width: 100%; margin: 0 0 50px; font-size: 1.65em;}
+      .footer-form{ width: 48%; padding: 20px;}
+         .footer-form p{width: 100%; margin: 0 0 15px;}
+         .footer-form input, .footer-form textarea{ width: 100%; margin: 0; padding:8px 5px;}
+         .footer-verification{ width: 100%; margin: 10px 0 25px;}
+         .footer-form button{ width: 100%; padding: 15px 0; }
+      .footer-information{ width: 48%; padding: 20px;}
+         .footer-information p{ width: 100%; margin: 0 0 15px; font-size: 1.15em;}
+         .footer-logo{ width: 100%; margin: 0 0 20px;}
+            .footer-logo h4{ width: 35%; margin: 0 10px 0 0;}
+            .footer-logo h5{ width: 16%; margin: 0 10px 0 0;} 
+         .footer-information iframe{ width: 100%; height: 30vh;}   
+      .construction-box{ padding: 0 50px 30px;}
+         .construction-box h3{ width: 100%; margin: 0 0 50px; font-size: 1.65em;}
+         .construction-box div{ width: 100%; margin: 0 0 20px; font-size: 1.15em;}
+            .construction-box div h5{ width: 110px; margin: 0 6px 0 0; padding: 5px 0;}
+            .construction-box div p{ width: calc(100% - 120px); margin: 0;}
+}
+@media only screen and (min-width: 1271px) {
+   .content-box01-img-text{ width: 90%; margin: 0 5%; padding: 50px; top: 5%;}
+      .content-box01-img-text-title, .content-box01-img-text-bigtitle{ width: 100%; }
+      .content-box01-img-text-title{margin: 0 0 4px;  font-size: 2.25em;}
+      .content-box01-img-text-bigtitle{margin: 0 0 20px; font-size: 3.35em;}
+      .content-box01-img-text p{ width: 80%; margin: 0 10%; font-size: 1.35em; line-height: 1.5em;}
+   
+   .content-box02-text-content{ width: 85%; margin: 0 5% 0 0;}
+      .content-box02-text-content div{ width: 80%; margin: 0 20% 0 0;}
+         .content-box02-text-content h3, .content-box02-text-content h4{ font-size: 2.05em;}
+         .content-box02-text-content h3{ width: 160px; margin: 0 10px 0 0;}
+         .content-box02-text-content h4{ width: 80%; margin: 0 20% 0 0;}
+         .content-box02-text-content hr{ width: calc(100% - 170px); height: 2px; margin: 5px 0 0;}
+         .content-box02-text-content p{ width: 100%; margin:30px 0 0; font-size: 1.65em; line-height: 1.5em;}
+}
+@media only screen and (min-width: 1441px) {
+   .max-width-style, .bottom-button{ width: 1440px; margin: 0 calc(50% - 720px);}
+   .content-box01-img-text p{ width: 56%; margin: 0 22%; font-size: 1.35em; line-height: 1.5em;}
+}
