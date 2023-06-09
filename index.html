@@ -321,12 +321,28 @@
                 </div>
             </div>
         </section>
+        <section class="boundary-style">
+            <div class="content-whitebg">
+                <div class="content-box05" id="reservation-form">
+                    <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js">
+                    </script>
+                    <script>
+                      hbspt.forms.create({
+                        region: "na1",
+                        portalId: "24321140",
+                        formId: "398c62bc-403c-4382-82b4-ddc8f1a38098"
+                      });
+                    </script>
+                </div>
+            </div>
+        </section>
         <footer>
-            <div class="footer max-width-style" id="reservation-form">
+            <div class="footer max-width-style">
             <div class="footer-information max-width-style wow rotateInUpRight" data-wow-delay="0.3s" data-wow-duration="1.2s">
                 <h3>聯絡資訊</h3>
                 <p>接待會館：三民路99號(新林國小旁)</p>
                 <p>貴賓專線：<a href="tel:0226083636" style="color: #fff">02-2608-3636</a></p>
+                <p>群祥機構：<a href="https://csdc.com.tw" target="_blank" style="color: #fff">https://csdc.com.tw</a></p>
                 <div class="footer-logo">
                     <h4><a href="https://csdc.com.tw/service.php#s_contact" target="_blank"> <img src="images/csdc.png"></a></h4>
                     <h5><a href="https://www.facebook.com/%E7%BE%A4%E7%A5%A5%E6%82%85-625508501248319/" target="_blank"> <img src="images/facebook.jpg"></a></h5>
@@ -396,7 +412,7 @@
                     <p>地圖導覽</p>
                 </div>
             </a>
-            <a href="https://csdc.com.tw/service.php#s_contact">
+            <a href="#reservation-form" class="to-reservation-form">
                 <div class="bottom-button-box">
                     <span><i class="fas fa-pencil-alt"></i></span>
                     <p>立即預約</p>
@@ -409,6 +425,20 @@
                 </div>
             </a>
         </div>
+        <!---->
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script language="javascript">
+            $(function(){        
+                $('.to-reservation-form').click(function(){
+                    $('html,body').animate({scrollTop:$('#reservation-form').offset().top- desiredHeight}, 1000);
+                });
+                
+                $(window).scroll(function (){
+                    desiredHeight = 10;
+                });
+            });
+        </script>
+        <!---->
         <!--run img-->
         <script src="js/jquery.1.9.1.js"></script>
         <script src="js/jquery.hiSlider.min.js"></script>
